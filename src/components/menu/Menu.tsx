@@ -7,6 +7,7 @@ export const Menu = (props: {menuItems:Array<string>}) => {
 			<ul>
 				{props.menuItems.map((item:string,i)=>{
 					return <li key={i}>
+						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 						<a href="#">{item}</a>
 					</li>
 				})}

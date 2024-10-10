@@ -31,7 +31,7 @@ export const Social = () => {
 	return (
 		<SocialStyled>
 			{socialItem.map((el, i) => {
-				return <a href={el.href}>
+				return <a key={i} href={el.href}>
 					<Icon iconId={el.iconId} width={el.width} height={el.height} viewBox={el.viewBox} />
 				</a>
 			})}

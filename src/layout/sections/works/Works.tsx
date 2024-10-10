@@ -31,7 +31,7 @@ const data = [
 		title: 'Project Tile goes here',
 		text: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
 		stack: 'HTML , JavaScript, SASS, React',
-		src: socialImg4,
+		src: socialImg3,
 		alt: 'project'
 	},
 	{
