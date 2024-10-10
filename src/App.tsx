@@ -1,6 +1,5 @@
 import './App.css'
 import React from 'react'
-import styled from 'styled-components'
 import { Container } from './components/styles-components/container/Container'
 import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
