@@ -6,7 +6,7 @@ import { FlexWrapper } from '../../../components/styles-components/flexwrapper/F
 export const Hero = () => {
 	return (
 		<SectionHero>
-			<FlexWrapper justify={'space-around'} align={'center'}>
+			<FlexWrapper justify={'space-between'} align={'center'}>
 				<div>
 					<span>Hi 👋</span>
 					<h2>My name is Alex Ovsiannikov</h2>
@@ -28,5 +28,4 @@ const PhotoImg = styled.img`
 
 const SectionHero = styled.section `
   margin: 100px 0 190px;
-  background-color: beige;
 `

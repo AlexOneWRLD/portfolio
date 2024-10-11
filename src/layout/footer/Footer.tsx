@@ -26,7 +26,6 @@ export const Footer = () => {
 
 const FooterSection = styled.footer`
   margin-bottom: 60px;
-  background-color: black;
 `
 
 const Copy = styled.p `

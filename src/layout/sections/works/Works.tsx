@@ -82,5 +82,4 @@ export const Works = () => {
 
 const SectionWorks = styled.div`
   margin: 0 0 180px 0;
-  background-color: cadetblue;
 `

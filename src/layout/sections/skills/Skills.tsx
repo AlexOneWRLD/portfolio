@@ -27,7 +27,7 @@ export const Skills = () => {
 			<FlexWrapper direction={"column"}>
 				<TitleSection>My Tech Stack</TitleSection>
 				<SubtitleSection> Technologies I’ve been working with recently</SubtitleSection>
-				<FlexList wrap={"wrap"} gap={"78px 70px"}>
+				<FlexList wrap={"wrap"} gap={"78px 99px"}>
 					{skillInfo.map((el,i)=>{
 						return (<li key={i}><Icon iconId={el.iconId} width={el.width} height={el.height} viewBox={el.viewBox} /></li>)
 					})}
@@ -39,5 +39,4 @@ export const Skills = () => {
 
 const SectionSkill = styled.section`
   margin: 190px 0 215px 0;
-	background-color: black;
 `

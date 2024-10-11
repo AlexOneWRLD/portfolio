@@ -7,11 +7,13 @@ import { Hero } from './layout/sections/hero/Hero'
 import { Questions } from './layout/sections/questions/Questions'
 import { Skills } from './layout/sections/skills/Skills'
 import { Works } from './layout/sections/works/Works'
+import { GlobalStyled } from './styles/Global.styled'
 
 
 function App() {
 	return (
 		<div className='App'>
+			<GlobalStyled/>
 			<Container>
 				<Header />
 				<Hero />
