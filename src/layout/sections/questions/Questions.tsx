@@ -13,7 +13,6 @@ export const Questions = () => {
 
 const QuestionsSection = styled.div `
   margin: 0 auto 205px;
-  background-color: burlywood;
 `
 
 const  Text = styled.p `

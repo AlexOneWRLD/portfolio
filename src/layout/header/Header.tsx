@@ -16,7 +16,6 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-  background-color: #000000;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
