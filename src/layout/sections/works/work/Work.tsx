@@ -46,6 +46,9 @@ const Image = styled.img`
 
 
 const Link = styled.a`
+	display: flex;
+	align-items: center;
+	
   &:not(:last-child) {
     margin: 0 58px 0 30px;
   }

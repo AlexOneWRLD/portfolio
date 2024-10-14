@@ -5,6 +5,7 @@ import { Menu } from '../../components/menu/Menu'
 import { Social } from '../../components/social/Social'
 import { Container } from '../../components/styles-components/container/Container'
 import { FlexWrapper } from '../../components/styles-components/flexwrapper/FlexWrapper'
+import { theme } from '../../styles/Theme'
 
 const headerMenu = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact']
 export const Header = () => {
@@ -29,4 +30,7 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   left: 0;
+	background-color: ${theme.colors.primaryBg};
+	
+	
 `

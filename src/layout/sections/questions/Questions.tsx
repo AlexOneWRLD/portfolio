@@ -26,9 +26,10 @@ const Text = styled.p`
 `
 
 const Link = styled.a`
-  font-weight: 700;
+  display: block;
+	text-align: center;
+	font-weight: 700;
   font-size: 58px;
   line-height: 1.2069;
   letter-spacing: -0.02em;
-	padding: 0 180px;
 `

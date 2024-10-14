@@ -5,6 +5,7 @@ import { Menu } from '../../components/menu/Menu'
 import { Social } from '../../components/social/Social'
 import { ColorText } from '../../components/styles-components/colortext/ColorText'
 import { FlexWrapper } from '../../components/styles-components/flexwrapper/FlexWrapper'
+import { theme } from '../../styles/Theme'
 
 const footerMenu = ['Home', 'About', 'Technologies', 'Projects', 'Contact']
 export const Footer = () => {
@@ -13,8 +14,8 @@ export const Footer = () => {
 			<FlexWrapper align={'center'} padding={'0 0 50px 0'} gap={'100px'} justify={'space-between'} borderbt={'2px solid #42446e'}>
 				<Logo />
 				<FlexWrapper gap={'50px'}>
-				<a href={'tel:+911234509876'}>+91 12345 09876</a>
-				<a href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</a>
+				<Link href={'tel:+911234509876'}>+91 12345 09876</Link>
+				<Link href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</Link>
 				</FlexWrapper>
 				<Social />
 			</FlexWrapper>
@@ -37,5 +38,12 @@ font-size: 18px;
 line-height: 1.44444;
 text-align: center;
 color: #a7a7a7;
+`
+
+const Link = styled.a `
+font-weight: 400;
+font-size: 18px;
+line-height: 1.4;
+	color: ${theme.colors.subTitle};
 `
 

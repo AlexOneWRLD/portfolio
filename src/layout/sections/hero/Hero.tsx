@@ -8,12 +8,10 @@ export const Hero = () => {
 	return (
 		<SectionHero>
 			<FlexWrapper justify={'space-between'} align={'center'}>
-				<div>
-					<Title>Hi 👋 , <br></br>
-						My name is <br></br>
-						<ColorText>Alex Ovsiannikov</ColorText> <br></br>
-						I build things for web</Title>
-				</div>
+				<Title>Hi 👋 , <br />
+					My name is <br />
+					<ColorText>Alex Ovsiannikov</ColorText> <br />
+					I build things for web</Title>
 				<PhotoWrapper>
 					<PhotoImg src={Photo} alt={'Photo Alex Ovsiannikov'} />
 				</PhotoWrapper>
@@ -23,7 +21,7 @@ export const Hero = () => {
 }
 
 const SectionHero = styled.section`
-	min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -45,18 +43,18 @@ const PhotoImg = styled.img`
   object-fit: cover;
   border-radius: 230px;
   z-index: 999;
-	position: absolute;
-	top: 5px;
-	left: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 `
 
-const PhotoWrapper = styled.div `
-		position: relative;
-		width: 360px;
-    height: 360px;
-    border-radius: 230px;
-    background: linear-gradient(0deg, #13b0f5 2.6%, #e70faa 100%);
-    z-index: -1;
+const PhotoWrapper = styled.div`
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 230px;
+  background: linear-gradient(0deg, #13b0f5 2.6%, #e70faa 100%);
+  z-index: -1;
 `
 
 
