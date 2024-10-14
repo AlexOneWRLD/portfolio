@@ -13,7 +13,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
 						<Link href='#'>{item}</Link>
 					</ListItem>
 				})}
-				<Social />
+				
 			</ul>
 			
 		</StyledHeaderMenu>
