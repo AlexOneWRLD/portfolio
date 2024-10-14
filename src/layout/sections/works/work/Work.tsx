@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Icon } from '../../../../components/icon/Icon'
+import { FlexWrapper } from '../../../../components/styles-components/flexwrapper/FlexWrapper'
 
 type WorkPropsType = {
 	title: string
@@ -17,9 +18,11 @@ export const Work = (props: WorkPropsType) => {
 			<Image src={props.src} alt={props.alt} />
 			<Title>{props.title}</Title>
 			<Text>{props.text}</Text>
-			<Stack>Tech stack :<AllStack>{props.stack}</AllStack></Stack>
+			<Stack>Tech stack : <AllStack>{props.stack}</AllStack></Stack>
+			<FlexWrapper>
 			<Link href={'#'}><Icon iconId={'link'} width={'20'} height={'20'} viewBox={'0 0 20 20'} />Live Preview</Link>
 			<Link href={'#'}><Icon iconId={'git-social'} width={'20'} height={'20'} viewBox={'0 0 30 30'} />View Code</Link>
+			</FlexWrapper>
 		</StyledWork>
 	)
 }
@@ -43,8 +46,6 @@ const Image = styled.img`
 
 
 const Link = styled.a`
-  display: inline-block;
-
   &:not(:last-child) {
     margin: 0 58px 0 30px;
   }
@@ -55,10 +56,15 @@ const Link = styled.a`
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #fff;
-	
-	svg{
-		margin-right: 12px;
-	}
+  transition: color 0.4s, fill 0.4s;
+
+  svg {
+    margin-right: 12px;
+  }
+
+  &:hover {
+    color: #2e6596;
+  }
 `
 
 const Title = styled.h3`

@@ -9,6 +9,7 @@ type FlexWrapperPropsType = {
 	gap?: string
 	padding?: string
 	borderbt?: string
+	height?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -20,5 +21,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   gap: ${props => props.gap || 'unset'};
 	padding:${props => props.padding || '0 0 0 0'} ;
 	border-bottom: ${props => props.borderbt || 'none'};
-	height: 100%;
+	height: ${props => props.height || 'auto'};
 `
