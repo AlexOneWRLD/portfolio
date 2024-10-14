@@ -8,15 +8,41 @@ export const Hero = () => {
 		<SectionHero>
 			<FlexWrapper justify={'space-between'} align={'center'}>
 				<div>
-					<span>Hi 👋</span>
-					<h2>My name is Alex Ovsiannikov</h2>
-					<h1>I build things for web</h1>
+					<Title>Hi 👋 , <br></br>
+						My name is <br></br>
+						<ColorText>Alex Ovsiannikov</ColorText> <br></br>
+						I build things for web</Title>
 				</div>
-				<PhotoImg src={Photo} alt={'Photo Alex Ovsiannikov'} />
+				<PhotoWrapper>
+					<PhotoImg src={Photo} alt={'Photo Alex Ovsiannikov'} />
+				</PhotoWrapper>
 			</FlexWrapper>
 		</SectionHero>
 	)
 }
+
+const SectionHero = styled.section`
+	min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`
+
+const Title = styled.h1`
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 1.2069;
+  letter-spacing: -0.02em;
+  color: #d9d9d9;
+`
+
+
+const ColorText = styled.span`
+  background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
 
 const PhotoImg = styled.img`
   width: 100%;
@@ -24,8 +50,19 @@ const PhotoImg = styled.img`
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 230px;
+  z-index: 999;
+	position: absolute;
+	top: 5px;
+	left: 5px;
 `
 
-const SectionHero = styled.section `
-  margin: 100px 0 190px;
+const PhotoWrapper = styled.div `
+		position: relative;
+		width: 360px;
+    height: 360px;
+    border-radius: 230px;
+    background: linear-gradient(0deg, #13b0f5 2.6%, #e70faa 100%);
+    z-index: -1;
 `
+
+

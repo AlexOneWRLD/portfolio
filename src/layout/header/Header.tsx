@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Logo } from '../../components/logo/Logo'
 import { Menu } from '../../components/menu/Menu'
-import { Social } from '../../components/social/Social'
 import { Container } from '../../components/styles-components/container/Container'
 import { FlexWrapper } from '../../components/styles-components/flexwrapper/FlexWrapper'
 
@@ -14,7 +13,6 @@ export const Header = () => {
 				<FlexWrapper justify={'space-between'} align={'center'}>
 					<Logo />
 					<Menu menuItems={headerMenu} ></Menu>
-					
 				</FlexWrapper>
 			</Container>
 		</StyledHeader>
