@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Photo from '../../../assets/img/photo/photo.jpg'
+import { ColorText } from '../../../components/styles-components/colortext/ColorText'
 import { FlexWrapper } from '../../../components/styles-components/flexwrapper/FlexWrapper'
 
 export const Hero = () => {
@@ -36,13 +37,6 @@ const Title = styled.h1`
   color: #d9d9d9;
 `
 
-
-const ColorText = styled.span`
-  background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
 
 const PhotoImg = styled.img`
   width: 100%;
