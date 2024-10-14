@@ -38,5 +38,5 @@ export const Skills = () => {
 }
 
 const SectionSkill = styled.section`
-  margin: 190px 0 215px 0;
+  margin: 10px 0 215px 0;
 `

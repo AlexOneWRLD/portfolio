@@ -20,4 +20,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   gap: ${props => props.gap || 'unset'};
 	padding:${props => props.padding || '0 0 0 0'} ;
 	border-bottom: ${props => props.borderbt || 'none'};
+	height: 100%;
 `
