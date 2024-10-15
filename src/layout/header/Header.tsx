@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Logo } from '../../components/logo/Logo'
-import { Menu } from '../../components/menu/Menu'
+import { HeaderMenu } from './headerMenu/HeaderMenu'
 import { Social } from '../../components/social/Social'
 import { Container } from '../../components/styles-components/container/Container'
 import { FlexWrapper } from '../../components/styles-components/flexwrapper/FlexWrapper'
 import { theme } from '../../styles/Theme'
+import { MobileMenu } from './mobileMenu/MobileMenu'
 
 const headerMenu = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact']
 export const Header = () => {
@@ -15,8 +16,11 @@ export const Header = () => {
 				<FlexWrapper align={'center'}>
 					<Logo />
 					<FlexWrapper gap={'51px'}>
-						<Menu menuItems={headerMenu}></Menu>
-						<Social />
+						<HeaderMenu menuItems={headerMenu}></HeaderMenu>
+						<MobileMenu menuItems={headerMenu}></MobileMenu>
+						<SocialWrapper>
+							<Social />
+						</SocialWrapper>
 					</FlexWrapper>
 				</FlexWrapper>
 			</Container>
@@ -30,7 +34,11 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   left: 0;
-	background-color: ${theme.colors.primaryBg};
-	
-	
+  background-color: ${theme.colors.primaryBg};
+`
+
+const SocialWrapper = styled.div`
+  @media ${theme.media.lowDisplay} {
+    display: none;
+  }
 `

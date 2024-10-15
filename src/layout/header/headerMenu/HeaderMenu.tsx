@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
-import { Social } from '../social/Social'
+import { theme } from '../../../styles/Theme'
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 	return (
 		<StyledHeaderMenu>
 			<ul>
@@ -13,9 +12,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
 						<Link href='#'>{item}</Link>
 					</ListItem>
 				})}
-				
 			</ul>
-			
 		</StyledHeaderMenu>
 	)
 }
@@ -26,6 +23,10 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
     gap: 65px;
   }
+	
+	@media ${theme.media.lowDisplay} {
+		display: none;
+	}
 `
 
 const ListItem = styled.li`
