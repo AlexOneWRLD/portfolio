@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Logo } from '../../components/logo/Logo'
-import { Menu } from '../../components/menu/Menu'
+import { HeaderMenu } from '../header/headerMenu/HeaderMenu'
 import { Social } from '../../components/social/Social'
 import { ColorText } from '../../components/styles-components/colortext/ColorText'
 import { FlexWrapper } from '../../components/styles-components/flexwrapper/FlexWrapper'
@@ -20,7 +20,7 @@ export const Footer = () => {
 				<Social />
 			</FlexWrapper>
 			<FlexWrapper align={'center'} padding={'50px 0 0 0'} gap={'35px'} justify={'space-between'}>
-				<Menu menuItems={footerMenu}/>
+				<HeaderMenu menuItems={footerMenu}/>
 				<Copy>Designed and built by <ColorText>Ovsyannikov AV</ColorText> with <ColorText>Love</ColorText>  & <ColorText>Coffee</ColorText></Copy>
 			</FlexWrapper>
 		</FooterSection>

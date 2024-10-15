@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { theme } from '../../styles/Theme'
 import { Icon } from '../icon/Icon'
 
 const socialItem = [
@@ -42,4 +43,6 @@ export const Social = () => {
 const SocialStyled = styled.div`
   display: flex;
   gap: 20px;
+	
+	
 `

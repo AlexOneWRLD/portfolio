@@ -6,5 +6,11 @@ export const theme = {
 		accent: 'linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%)',
 		subTitle: '#A7A7A7',
 		font: '#CCCCCC',
+	},
+	
+	media: {
+		lowDisplay: 'screen and (max-width: 998px)',
+		tablet: 'screen and (max-width: 768px)',
+		mobile: 'screen and (max-width: 576px)',
 	}
 }
