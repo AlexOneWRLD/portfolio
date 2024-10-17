@@ -19,7 +19,7 @@ const QuestionsSection = styled.div`
 const Text = styled.p`
   text-align: center;
   font-weight: 700;
-  font-size: 58px;
+  font-size: calc((100vw - 320px) / (1600 - 320) * (58 - 25) + 25px);
   line-height: 1.2069;
   letter-spacing: -0.02em;
   color: #ccc;
@@ -29,7 +29,6 @@ const Link = styled.a`
   display: block;
 	text-align: center;
 	font-weight: 700;
-  font-size: 58px;
-  line-height: 1.2069;
-  letter-spacing: -0.02em;
+  font-size: calc((100vw - 320px) / (1600 - 320) * (58 - 20) + 20px);
+  line-height: 1.2;
 `
