@@ -11,17 +11,21 @@ const footerMenu = ['Home', 'About', 'Technologies', 'Projects', 'Contact']
 export const Footer = () => {
 	return (
 		<FooterSection>
-			<FlexWrapper align={'center'} padding={'0 0 50px 0'} gap={'100px'} justify={'space-between'} borderbt={'2px solid #42446e'}>
+			<FlexWrapper align={'center'} padding={'0 0 50px 0'} gap={'100px'} justify={'space-between'}
+			             borderbt={'2px solid #42446e'}>
 				<Logo />
 				<FlexWrapper gap={'50px'}>
-				<Link href={'tel:+911234509876'}>+91 12345 09876</Link>
-				<Link href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</Link>
+					<Link href={'tel:+911234509876'}>+91 12345 09876</Link>
+					<Link href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</Link>
 				</FlexWrapper>
-				<Social />
+				<SocialWrapper>
+					<Social />
+				</SocialWrapper>
 			</FlexWrapper>
 			<FlexWrapper align={'center'} padding={'50px 0 0 0'} gap={'35px'} justify={'space-between'}>
-				<HeaderMenu menuItems={footerMenu}/>
-				<Copy>Designed and built by <ColorText>Ovsyannikov AV</ColorText> with <ColorText>Love</ColorText>  & <ColorText>Coffee</ColorText></Copy>
+				<HeaderMenu menuItems={footerMenu} />
+				<Copy>Designed and built by <ColorText>Ovsyannikov
+					AV</ColorText> with <ColorText>Love</ColorText> & <ColorText>Coffee</ColorText></Copy>
 			</FlexWrapper>
 		</FooterSection>
 	)
@@ -32,18 +36,28 @@ const FooterSection = styled.footer`
   margin-bottom: 60px;
 `
 
-const Copy = styled.p `
-font-weight: 400;
-font-size: 18px;
-line-height: 1.44444;
-text-align: center;
-color: #a7a7a7;
+const Copy = styled.p`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.44444;
+  text-align: center;
+  color: #a7a7a7;
 `
 
-const Link = styled.a `
-font-weight: 400;
-font-size: 18px;
-line-height: 1.4;
-	color: ${theme.colors.subTitle};
+const Link = styled.a`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: ${theme.colors.subTitle};
+
+  @media ${theme.media.mobile} {
+    font-size: 10px;
+  }
+`
+
+const SocialWrapper = styled.div`
+  @media ${theme.media.lowDisplay} {
+    display: none;
+  }
 `
 

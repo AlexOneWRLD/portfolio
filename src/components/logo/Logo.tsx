@@ -6,7 +6,7 @@ export const Logo = () => {
 	return (
 		// eslint-disable-next-line jsx-a11y/anchor-is-valid
 		<LogoHref href='#'>
-			<Icon iconId={'greensock'}/>
+			<Icon iconId={'greensock'} ariaLabel={'greensock'}/>
 		</LogoHref>
 	)
 }

@@ -17,7 +17,7 @@ export const Header = () => {
 					<Logo />
 					<FlexWrapper gap={'51px'}>
 						<HeaderMenu menuItems={headerMenu}></HeaderMenu>
-						<MobileMenu menuItems={headerMenu}></MobileMenu>
+						<MobileMenu menuItems={headerMenu} aria-haspopup={true}></MobileMenu>
 						<SocialWrapper>
 							<Social />
 						</SocialWrapper>
@@ -34,7 +34,7 @@ const StyledHeader = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.primaryBg};\
 `
 
 const SocialWrapper = styled.div`
