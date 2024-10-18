@@ -63,7 +63,7 @@ export const Works = () => {
 				<TitleSection>Projects</TitleSection>
 				<SubtitleSection>Things I’ve built so far</SubtitleSection>
 				
-				<FlexList wrap={'wrap'} gap={'35px'}>
+				<FlexList wrap={'wrap'} gap={'35px'} justify={'center'}>
 					{
 						data.map((el, index, arr) => {
 							return <Work key={index} title={el.title}
