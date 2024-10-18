@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Icon } from '../../../../components/icon/Icon'
 import { FlexWrapper } from '../../../../components/styles-components/flexwrapper/FlexWrapper'
+import { font } from '../../../../styles/Common'
+import { theme } from '../../../../styles/Theme'
 
 type WorkPropsType = {
 	title: string
@@ -30,15 +32,18 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   border-radius: 20px;
-  width: 375px;
+  max-width: 375px;
   height: 567px;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
   background: #363636;
+	
+	@media ${theme.media.mobile}{
+		height: 490px;
+	}
 `
 
 const Image = styled.img`
   width: 100%;
-  height: 260px;
   max-width: 375px;
   margin-bottom: 27px;
   object-fit: cover;
@@ -52,13 +57,10 @@ const Link = styled.a`
   &:not(:last-child) {
     margin: 0 58px 0 30px;
   }
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.625;
+	
+	${font({weight:400,lineHeight:1.6,color:"#fff",Fmax:16,Fmin:12})}
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #fff;
   transition: color 0.4s, fill 0.4s;
 
   svg {
@@ -71,30 +73,20 @@ const Link = styled.a`
 `
 
 const Title = styled.h3`
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 1;
-  color: #ccc;
+	${font({weight:500,lineHeight:1,color:"#ccc",Fmax:28,Fmin:20})}
   margin: 0 31px 17px 28px;
 `
 
 const Text = styled.p`
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.4;
-  color: #ccc;
+	${font({weight:300,lineHeight:1.4,color:"#ccc",Fmax:18,Fmin:12})}
   margin: 0 31px 12px 28px;
 `
 
 const Stack = styled.p`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #ccc;
+  ${font({ weight: 400, lineHeight: 1.6, color: "#ccc", Fmax: 16, Fmin: 10 })}
   margin: 0 31px 21px 28px;
 `
 
 const AllStack = styled.span`
-  font-weight: 300;
-  font-size: 14px;
+  ${font({ weight: 300, Fmax: 14, Fmin: 8 })}
 `
