@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../../components/styles-components/flexwrapper/F
 import { Icon } from '../../../components/icon/Icon'
 import { SubtitleSection } from '../../../components/styles-components/subtitle/SubtitleSection'
 import { TitleSection } from '../../../components/styles-components/title/TitleSection'
+import { theme } from '../../../styles/Theme'
 
 
 const skillInfo = [
@@ -27,7 +28,7 @@ export const Skills = () => {
 			<FlexWrapper direction={'column'}>
 				<TitleSection>My Tech Stack</TitleSection>
 				<SubtitleSection> Technologies I’ve been working with recently</SubtitleSection>
-				<FlexList wrap={'wrap'} gap={'78px 99px'}>
+				<FlexList wrap={'wrap'} gap={'78px 99px'} grow={'1'} justify={'space-between'}>
 					{skillInfo.map((el, i) => {
 						return (
 							<ul>
@@ -44,4 +45,11 @@ export const Skills = () => {
 
 const SectionSkill = styled.section`
   margin: 10px 0 215px 0;
+	
+	
+	${FlexList} {
+		@media ${theme.media.mobile}{
+			gap: 30px 30px;
+		}
+	}
 `

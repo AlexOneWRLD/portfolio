@@ -6,6 +6,7 @@ type FlexListPropsType = {
 	align?: string
 	wrap?: string
 	gap?: string
+	grow?: string
 }
 
 export const FlexList = styled.div<FlexListPropsType>`
@@ -15,4 +16,5 @@ export const FlexList = styled.div<FlexListPropsType>`
   align-items: ${props => props.align || 'stretch'};
   flex-wrap: ${props => props.wrap || 'nowrap'};
   gap: ${props => props.gap || 'unset'};
+	flex-grow:${props => props.grow || 'unset'} ;
 `
