@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '../../../styles/Theme'
 
 export const SubtitleSection = styled.h3`
   font-weight: 400;
@@ -7,4 +8,8 @@ export const SubtitleSection = styled.h3`
   text-align: center;
   color: #a7a7a7;
   margin-bottom: 150px;
+	
+	@media ${theme.media.mobile}{
+		margin-bottom: 50px;
+	}
 `

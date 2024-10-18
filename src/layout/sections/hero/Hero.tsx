@@ -30,6 +30,7 @@ const SectionHero = styled.section`
   flex-direction: column;
   @media ${theme.media.mobile} {
    padding-top: 150px;
+	  margin-bottom: 150px;
   }
 `
 

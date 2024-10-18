@@ -14,7 +14,7 @@ export const Footer = () => {
 			<FlexWrapper align={'center'} padding={'0 0 50px 0'} gap={'100px'} justify={'space-between'}
 			             borderbt={'2px solid #42446e'}>
 				<Logo />
-				<FlexWrapper gap={'50px'}>
+				<FlexWrapper gap={'50px'} wrap={'wrap'}>
 					<Link href={'tel:+911234509876'}>+91 12345 09876</Link>
 					<Link href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</Link>
 				</FlexWrapper>
