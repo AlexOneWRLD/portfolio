@@ -33,13 +33,14 @@ export const Work = (props: WorkPropsType) => {
 const StyledWork = styled.div`
   border-radius: 20px;
   max-width: 375px;
-  height: 567px;
+  height: 100%;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
   background: #363636;
 	
-	@media ${theme.media.mobile}{
-		height: 490px;
+	${FlexWrapper} {
+		margin-bottom: 30px;
 	}
+	
 `
 
 const Image = styled.img`
@@ -56,7 +57,12 @@ const Link = styled.a`
 	
   &:not(:last-child) {
     margin: 0 58px 0 30px;
+	  
+	  @media ${theme.media.mobile}{
+		  margin: 0 30px 0 30px;
+	  }
   }
+	
 	
 	${font({weight:400,lineHeight:1.6,color:"#fff",Fmax:16,Fmin:12})}
   text-decoration: underline;
