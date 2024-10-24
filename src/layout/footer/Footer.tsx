@@ -34,6 +34,12 @@ export const Footer = () => {
 
 const FooterSection = styled.footer`
   margin-bottom: 60px;
+	
+	@media ${theme.media.mobile}{
+		${FlexWrapper} {
+			gap: 50px;
+		}
+	}
 `
 
 const Copy = styled.p`
