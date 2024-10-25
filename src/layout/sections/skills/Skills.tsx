@@ -1,12 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
-import { FlexList } from '../../../components/styles-components/flex-list/FlexList'
 import { FlexWrapper } from '../../../components/styles-components/flexwrapper/FlexWrapper'
 import { Icon } from '../../../components/icon/Icon'
 import { GridList } from '../../../components/styles-components/GridList/GridList'
 import { SubtitleSection } from '../../../components/styles-components/subtitle/SubtitleSection'
 import { TitleSection } from '../../../components/styles-components/title/TitleSection'
-import { theme } from '../../../styles/Theme'
+import { S } from './Skills_Styled'
+import { Fade } from 'react-awesome-reveal'
 
 
 const skillInfo = [
@@ -23,45 +22,28 @@ const skillInfo = [
 	{ iconId: 'vscode', width: '112', height: '112', viewBox: '0 0 112 112', ariaLabel: 'vscode' },
 	{ iconId: 'github', width: '88', height: '88', viewBox: '0 0 88 88', ariaLabel: 'github' }
 ]
-export const Skills = () => {
+export const Skills: React.FC = () => {
 	return (
-		<SectionSkill>
+		<S.SectionSkill id={'techstack'}>
 			<FlexWrapper direction={'column'}>
 				<TitleSection>My Tech Stack</TitleSection>
 				<SubtitleSection> Technologies I’ve been working with recently</SubtitleSection>
-				<GridList  gap={'78px 99px'} template_columns={'repeat(6,1fr)'} justify={'space-between'}>
+				<GridList gap={'78px 99px'} template_columns={'repeat(6,1fr)'} justify={'space-between'}>
 					{skillInfo.map((el, i) => {
 						return (
-							<SkillList>
-								<li key={i}><Icon iconId={el.iconId} width={el.width} height={el.height} viewBox={el.viewBox}
-								                  ariaLabel={el.ariaLabel} />
+							<S.SkillList>
+								<li key={i}>
+									<Fade cascade={true} damping={0.5}>
+										<Icon iconId={el.iconId} width={el.width} height={el.height} viewBox={el.viewBox}
+										      ariaLabel={el.ariaLabel} />
+									</Fade>
 								</li>
-							</SkillList>)
+							</S.SkillList>
+						)
 					})}
 				</GridList>
 			</FlexWrapper>
-		</SectionSkill>
+		</S.SectionSkill>
 	)
 }
 
-const SectionSkill = styled.section`
-  margin: 10px 0 215px 0;
-	
-	${GridList} {
-		@media ${theme.media.midDisplay}{
-			grid-template-columns: repeat(4,1fr);
-		}
-		@media ${theme.media.lowDisplay}{
-			grid-template-columns: repeat(3,1fr);
-			gap: 20px 40px;
-		}
-		@media ${theme.media.mobile}{
-			grid-template-columns: repeat(2,1fr);
-			gap: 30px 10px;
-		}
-	}
-`
-
-const SkillList = styled.ul `
-margin: 0 auto;
-`

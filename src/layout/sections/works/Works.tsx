@@ -4,6 +4,7 @@ import { FlexList } from '../../../components/styles-components/flex-list/FlexLi
 import { FlexWrapper } from '../../../components/styles-components/flexwrapper/FlexWrapper'
 import { SubtitleSection } from '../../../components/styles-components/subtitle/SubtitleSection'
 import { TitleSection } from '../../../components/styles-components/title/TitleSection'
+import { theme } from '../../../styles/Theme'
 import { Work } from './work/Work'
 import socialImg from '../../../assets/img/project/proj-1.png'
 import socialImg2 from '../../../assets/img/project/proj-2.png'
@@ -56,9 +57,9 @@ const data = [
 		alt: 'project'
 	}
 ]
-export const Works = () => {
+export const Works: React.FC = () => {
 	return (
-		<SectionWorks>
+		<SectionWorks id={'projects'}>
 			<FlexWrapper direction={'column'}>
 				<TitleSection>Projects</TitleSection>
 				<SubtitleSection>Things I’ve built so far</SubtitleSection>
@@ -81,5 +82,7 @@ export const Works = () => {
 
 
 const SectionWorks = styled.div`
+	position: relative;
   margin: 0 0 180px 0;
+	background-color: ${theme.colors.primaryBg};
 `
