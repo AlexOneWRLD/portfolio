@@ -1,69 +1,41 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Logo } from '../../components/logo/Logo'
-import { HeaderMenu } from '../header/headerMenu/HeaderMenu'
+import { DesktopMenu } from '../header/headerMenu/desktopMenu/DesktopMenu'
 import { Social } from '../../components/social/Social'
 import { ColorText } from '../../components/styles-components/colortext/ColorText'
 import { FlexWrapper } from '../../components/styles-components/flexwrapper/FlexWrapper'
-import { theme } from '../../styles/Theme'
+import { S } from './Footer_Styles'
 
-const footerMenu = ['Home', 'About', 'Technologies', 'Projects', 'Contact']
-export const Footer = () => {
+export const Footer: React.FC = () => {
+	
+	 const [width, setWidth] = React.useState(window.innerWidth);
+   const breakpoint = 998;
+	 
+	  React.useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
 	return (
-		<FooterSection>
+		<S.FooterSection>
 			<FlexWrapper align={'center'} padding={'0 0 50px 0'} gap={'100px'} justify={'space-between'}
 			             borderbt={'2px solid #42446e'}>
 				<Logo />
 				<FlexWrapper gap={'50px'} wrap={'wrap'}>
-					<Link href={'tel:+911234509876'}>+91 12345 09876</Link>
-					<Link href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</Link>
+					<S.Link href={'tel:+911234509876'}>+91 12345 09876</S.Link>
+					<S.Link href={'mailto:a.v.ovsyannikov@internet.ru'}>a.v.ovsyannikov@internet.ru</S.Link>
 				</FlexWrapper>
-				<SocialWrapper>
+				<S.SocialWrapper>
 					<Social />
-				</SocialWrapper>
+				</S.SocialWrapper>
 			</FlexWrapper>
 			<FlexWrapper align={'center'} padding={'50px 0 0 0'} gap={'35px'} justify={'space-between'}>
-				<HeaderMenu menuItems={footerMenu} />
-				<Copy>Designed and built by <ColorText>Ovsyannikov
-					AV</ColorText> with <ColorText>Love</ColorText> & <ColorText>Coffee</ColorText></Copy>
+				{width < breakpoint ? '' :<DesktopMenu></DesktopMenu> }
+				<S.Copy>Designed and built by <ColorText>Ovsyannikov
+					AV</ColorText> with <ColorText>Love</ColorText> & <ColorText>Coffee</ColorText></S.Copy>
 			</FlexWrapper>
-		</FooterSection>
+		</S.FooterSection>
 	)
 }
 
 
-const FooterSection = styled.footer`
-  margin-bottom: 60px;
-	
-	@media ${theme.media.mobile}{
-		${FlexWrapper} {
-			gap: 50px;
-		}
-	}
-`
-
-const Copy = styled.p`
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.44444;
-  text-align: center;
-  color: #a7a7a7;
-`
-
-const Link = styled.a`
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
-  color: ${theme.colors.subTitle};
-
-  @media ${theme.media.mobile} {
-    font-size: 10px;
-  }
-`
-
-const SocialWrapper = styled.div`
-  @media ${theme.media.lowDisplay} {
-    display: none;
-  }
-`
 

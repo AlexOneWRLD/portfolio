@@ -1,5 +1,6 @@
 import './App.css'
 import React from 'react'
+import { Particle } from './components/particles/Particles'
 import { Container } from './components/styles-components/container/Container'
 import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
@@ -13,6 +14,7 @@ import { GlobalStyled } from './styles/Global.styled'
 function App() {
 	return (
 		<div className='App'>
+			<Particle/>
 			<GlobalStyled/>
 			<Container>
 				<Header />

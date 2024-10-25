@@ -1,11 +1,15 @@
 import React from 'react'
+import { animateScroll } from 'react-scroll';
 import styled from 'styled-components'
 import { Icon } from '../icon/Icon'
 
-export const Logo = () => {
+const options = {
+  smooth: true,
+};
+
+export const Logo: React.FC = () => {
 	return (
-		// eslint-disable-next-line jsx-a11y/anchor-is-valid
-		<LogoHref href='#'>
+		<LogoHref onClick={()=>{animateScroll.scrollToTop(options)}}>
 			<Icon iconId={'greensock'} ariaLabel={'greensock'}/>
 		</LogoHref>
 	)
@@ -13,5 +17,6 @@ export const Logo = () => {
 
 const LogoHref = styled.a `
 margin-right: auto;
+	cursor: pointer;
 `
 

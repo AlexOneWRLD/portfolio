@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
 import { Icon } from '../icon/Icon'
 
 const socialItem = [
