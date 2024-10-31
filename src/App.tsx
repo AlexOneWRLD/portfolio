@@ -4,6 +4,7 @@ import { Particle } from './components/particles/Particles'
 import { Container } from './components/styles-components/container/Container'
 import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
+import { About } from './layout/sections/about/About'
 import { Hero } from './layout/sections/hero/Hero'
 import { Questions } from './layout/sections/questions/Questions'
 import { Skills } from './layout/sections/skills/Skills'
@@ -19,6 +20,7 @@ function App() {
 			<Container>
 				<Header />
 				<Hero />
+				<About/>
 				<Skills />
 				<Works/>
 				<Questions/>
