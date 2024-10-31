@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { font } from './Common'
 import { theme } from './Theme'
 
 export const GlobalStyled = createGlobalStyle `
@@ -120,8 +121,7 @@ export const GlobalStyled = createGlobalStyle `
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	  background-color: ${theme.colors.primaryBg};
-	  color: ${theme.colors.font};
-	  line-height: 1.3;
+	  ${font({weight:300,lineHeight:1.4,color:theme.colors.font,Fmax:18,Fmin:12})};
   }
 
 `

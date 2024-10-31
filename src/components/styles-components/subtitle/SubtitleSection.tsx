@@ -1,12 +1,10 @@
 import styled from 'styled-components'
+import { font } from '../../../styles/Common'
 import { theme } from '../../../styles/Theme'
 
 export const SubtitleSection = styled.h3`
-  font-weight: 400;
-	font-size: calc((100vw - 320px) / (1600 - 320) * (32 - 18) + 18px);
-  line-height: 0.8125;
+	${font({weight:400,lineHeight:0.8,color:theme.colors.subTitle, Fmax:32,Fmin:18})}
   text-align: center;
-  color: #a7a7a7;
   margin-bottom: 150px;
 	
 	@media ${theme.media.mobile}{

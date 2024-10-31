@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { font } from '../../../styles/Common'
 import { theme } from '../../../styles/Theme'
 
 
@@ -9,20 +10,15 @@ const QuestionsSection = styled.div`
 `
 
 const Text = styled.p`
+	${font({weight:700, color:theme.colors.font,lineHeight:1.2,Fmax:58,Fmin:25})}
   text-align: center;
-  font-weight: 700;
-  font-size: calc((100vw - 320px) / (1600 - 320) * (58 - 25) + 25px);
-  line-height: 1.2069;
-  letter-spacing: -0.02em;
-  color: #ccc;
+	letter-spacing: -0.02em;
 `
 
 const Link = styled.a`
+	${font({weight:700, lineHeight:1.2,Fmax:58,Fmin:20})}
   display: block;
 	text-align: center;
-	font-weight: 700;
-  font-size: calc((100vw - 320px) / (1600 - 320) * (58 - 20) + 20px);
-  line-height: 1.2;
 `
 
 export const S = {
