@@ -1,4 +1,3 @@
-import React from 'react'
 import { S } from '../HeaderMenu_Styles'
 
 const menuItems = [
@@ -9,23 +8,30 @@ const menuItems = [
 	{ name: 'Contact', href: 'contact' }
 ]
 
-export const Menu: React.FC = () => {
-	return (
-		<ul>
-			{menuItems.map((item, i) => {
-				return <S.ListItem key={i}>
-					<S.NavLink
-						activeClass='active'
-						to={item.href}
-						smooth={true}
-						spy={true}
-						offset={-180}
-						duration={1000}
-					>{item.name}</S.NavLink>
-				</S.ListItem>
-			})}
-		</ul>
-	)
+type Props = {
+	onClose?: (isOpen: boolean)=>void
 }
+
+// export const Menu: React.FC<Props> = (props) => {
+	export const Menu = ({onClose}:Props) => {
+		return (
+			<ul>
+				{menuItems.map((item, i) => {
+					return <S.ListItem key={i}>
+						<S.NavLink
+							onClick={()=>{onClose?.(false)}}
+							activeClass='active'
+							to={item.href}
+							smooth={true}
+							spy={true}
+							offset={-180}
+							duration={1000}
+						>{item.name}</S.NavLink>
+					</S.ListItem>
+				})}
+			</ul>
+		)
+	}
+
 
 

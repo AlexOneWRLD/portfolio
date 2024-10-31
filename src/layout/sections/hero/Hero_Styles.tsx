@@ -8,13 +8,15 @@ const SectionHero = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @media ${theme.media.mobile} {
-   padding-top: 150px;
-	  margin-bottom: 150px;
-	  
-	  ${FlexWrapper}{
-		  justify-content: center;
-	  }
+	gap: 100px;
+  @media ${theme.media.lowDisplay} {
+    padding-top: 150px;
+    margin-bottom: 150px;
+
+    ${FlexWrapper} {
+      justify-content: center;
+	    gap: 50px 250px;
+    }
   }
 `
 

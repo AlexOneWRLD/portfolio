@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
 					<p>I build things for web I frontend developer</p>
 					<Typewriter
 						options={{
-							strings: ['I build things for web','I frontend developer'],
+							strings: ['I build things for web', 'I frontend developer'],
 							autoStart: true,
 							loop: true
 						}}

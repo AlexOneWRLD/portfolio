@@ -14,8 +14,8 @@ export const MobileMenu: React.FC = () => {
 				<span></span>
 			</S.BurgerButton>
 			
-			<S.WrapperMobileMenu isOpen={menuIsOpen} onClick={()=>{setmenuIsOpen(false)}}>
-				<Menu />
+			<S.WrapperMobileMenu isOpen={menuIsOpen} onClick={()=>{setmenuIsOpen(false)}} >
+				<Menu onClose={setmenuIsOpen}/>
 					<Social/>
 			</S.WrapperMobileMenu>
 		</S.StyledMobileMenu>
